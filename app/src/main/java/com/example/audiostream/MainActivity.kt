@@ -35,7 +35,7 @@ class MainActivity : AppCompatActivity() {
             Thread { startSending() }.start()
         }
         
-        receiveButton.setOnClickListener {\
+        receiveButton.setOnClickListener {
             if (isSending) return@setOnClickListener
             isReceiving = true
             Thread { startReceiving() }.start()
