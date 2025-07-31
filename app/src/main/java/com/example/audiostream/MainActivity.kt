@@ -10,8 +10,6 @@ import java.io.OutputStream
 import java.net.Socket
 
 class MainActivity : AppCompatActivity() {
-    var isSending = false
-    var isReceiving = false
     private val serverIP = "YOUR_SERVER_IP" // <-- ЗАМЕНИ НА VPS IP
     private val serverPort = 50005
     private val sampleRate = 16000
@@ -27,6 +25,9 @@ class MainActivity : AppCompatActivity() {
 
         val sendButton = findViewById<Button>(R.id.buttonSend)
         val receiveButton = findViewById<Button>(R.id.buttonReceive)
+        
+        var isSending = false
+        var isReceiving = false
 
         sendButton.setOnClickListener {
             if (isReceiving) return@setOnClickListener
